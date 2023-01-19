@@ -106,7 +106,6 @@ public class Controller {
         persona.setCumpleanos(dtopersona.getCumpleanos());
         persona.setNacionalidad(dtopersona.getNacionalidad());
         persona.setCv(dtopersona.getCv());
-        persona.setCertificado(dtopersona.getCertificado());
         
     impPersonaService.save(persona);
     return new ResponseEntity(new Mensaje("Persona actualizada"),HttpStatus.OK);

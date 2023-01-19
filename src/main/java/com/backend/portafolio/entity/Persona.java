@@ -49,8 +49,6 @@ public class Persona {
     private String nacionalidad;
     @Column(length = 3000)
     private String cv;
-    @Column(length = 3000)
-    private String certificado;
     
     @OneToMany(mappedBy="personaId")
     private List<Estudio> estudios;    
@@ -68,7 +66,7 @@ public class Persona {
 
     }
 
-    public Persona(Integer id, String nombre, String apellido, String domicilio, String telefono, String correo, String sobre_mi, String url_foto, String contrasena, String titulo, String edad, String cumpleanos, String nacionalidad, String cv, String certificado, List<Estudio> estudios, List<Experiencia> experiencias, List<Proyecto> proyectos, List<Servicio> servicios) {
+    public Persona(Integer id, String nombre, String apellido, String domicilio, String telefono, String correo, String sobre_mi, String url_foto, String contrasena, String titulo, String edad, String cumpleanos, String nacionalidad, String cv, List<Estudio> estudios, List<Experiencia> experiencias, List<Proyecto> proyectos, List<Servicio> servicios) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -83,7 +81,6 @@ public class Persona {
         this.cumpleanos = cumpleanos;
         this.nacionalidad = nacionalidad;
         this.cv = cv;
-        this.certificado = certificado;
         
         estudios= new ArrayList();
         experiencias= new ArrayList();
